@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - '0.10'
+before_install:
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'generator-d3-iris' ]; then cd .. && eval "mv $currentfolder generator-d3-iris" && cd generator-d3-iris; fi
+
