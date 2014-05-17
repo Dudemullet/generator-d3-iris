@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Yeoman d3 generator that includes the iris data set in 2 different formats(json & csv). Uses gulp, express and livereload",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "repository": "Lgutierrez/generator-d3-iris",
   "author": {
     "name": "Luis Gutierrez",
