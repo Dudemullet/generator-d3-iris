@@ -26,7 +26,7 @@ $ gulp
 ### Create a new test case
 
 ```
-$ yo d3-iris:new
+$ yo d3-iris:new <name>
 ```
 
 ## License
