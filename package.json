@@ -1,6 +1,6 @@
 {
   "name": "generator-d3-iris",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Yeoman d3 generator that includes the iris data set in 2 different formats(json & csv). Uses gulp, express and livereload",
   "license": "MIT",
   "private": false,
@@ -15,7 +15,8 @@
   },
   "files": [
     "app",
-    "new"
+    "new",
+    "adv"
   ],
   "keywords": [
     "yeoman-generator",
