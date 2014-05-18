@@ -2,7 +2,8 @@
 var util = require('util');
 var path = require('path');
 var yeoman = require('yeoman-generator');
-var chalk = require('chalk');
+var chalk = require('chalk')
+var yosay = require('yosay');
 
 
 var D3BasicGenerator = yeoman.generators.Base.extend({
@@ -14,7 +15,7 @@ var D3BasicGenerator = yeoman.generators.Base.extend({
         this.installDependencies({
           callback: function() {
             this.log(chalk.magenta('Installation is now complete'));
-            this.log(chalk.magenta('To get started run the command:\n\t') + chalk.green("gulp"));
+            this.log(yosay('To get started run the command: gulp'));
           }.bind(this)
         });
       }
@@ -28,7 +29,8 @@ var D3BasicGenerator = yeoman.generators.Base.extend({
     this.log(this.yeoman);
 
     // replace it with a short and sweet description of your generator
-    this.log(chalk.magenta('You\'re using the D3 Basic generator.'));
+    this.log(yosay('You\'re using the D3 Basic generator.'));
+
 
     done();
   },
