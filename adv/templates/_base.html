@@ -25,20 +25,16 @@
     // http://bl.ocks.org/mbostock/3019563 <- Margin Convention, by Mike Bostock
 
     function chart() {
-      var 
+      var
         margin = {top:0,right:0,bottom:0,left:0},
         width = 800 - margin.right - margin.left,
         height = 600 - margin.top - margin.bottom;
 
       var my = function(selection) {
-
-        //update
-        var svg = this.call(drawSvg);
-
-        // enter
-        svg = this.enter() 
-            .append("svg")
-            .call(drawSvg);
+        var svg = this.enter()
+          .append("svg")
+          .call(drawSvg)
+          .select("g");
       }
 
       function drawSvg(selection){
