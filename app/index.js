@@ -13,7 +13,10 @@ var D3BasicGenerator = yeoman.generators.Base.extend({
     this.on('end', function () {
       if (!this.options['skip-install']) {
         this.installDependencies({
+          bower: false,
+          npm: true,
           callback: function() {
+            this.spawnCommand("npm", ["run", "bundle"]);
             this.log(chalk.magenta('Installation is now complete'));
             this.log(yosay('To get started run the command: gulp'));
           }.bind(this)
@@ -43,6 +46,7 @@ var D3BasicGenerator = yeoman.generators.Base.extend({
     this.copy('iris.json', 'app/iris.json');
     this.copy('iris.csv', 'app/iris.csv');
     this.copy('server.js', 'server.js');
+    this.copy('bundle.js', 'bundle.js');
   },
 
   projectfiles: function () {
