@@ -18,7 +18,7 @@ var D3BasicGenerator = yeoman.generators.Base.extend({
           callback: function() {
             this.spawnCommand("npm", ["run", "bundle"]);
             this.log(chalk.magenta('Installation is now complete'));
-            this.log(yosay('To get started run the command: gulp'));
+            this.log(yosay('To get started run the command: node server'));
           }.bind(this)
         });
       }
@@ -32,7 +32,7 @@ var D3BasicGenerator = yeoman.generators.Base.extend({
     this.log(this.yeoman);
 
     // replace it with a short and sweet description of your generator
-    this.log(yosay('You\'re using the D3 Basic generator.'));
+    this.log(yosay('You\'re using the D3-Iris generator.'));
 
 
     done();
