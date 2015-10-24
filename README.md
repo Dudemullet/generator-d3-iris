@@ -20,7 +20,7 @@ Run the generator:
 $ mkdir <project-dir>
 $ cd <project-dir>
 $ yo d3-iris
-$ gulp
+$ node server
 ```
 
 ### Create a new test case
