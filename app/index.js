@@ -46,6 +46,7 @@ var D3BasicGenerator = yeoman.generators.Base.extend({
     this.copy('iris.csv', 'app/iris.csv');
     this.copy('server.js', 'server.js');
     this.copy('bundle.js', 'bundle.js');
+    this.copy('README.md', 'README.md');
   },
 });
 
