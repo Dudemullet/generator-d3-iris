@@ -1,7 +1,6 @@
 // Module Dependencies
 var express = require('express'),
   app = express();
-  http = require('http'),
   path = require('path'),
   fs = require("fs"),
   _ = require('lodash'),
@@ -23,17 +22,16 @@ app.get("/", function(req, res, next) {
   dir.paths(conf.dir, function(err,paths){
     if(err)
       res.send(500);
-    var filtered_dirs = paths.dirs.filter(excluded_folders).map(relative_dirs);
-    res.render("index.jade", {dirs:filtered_dirs});
+
+    res.render("index.jade", {
+      dirs: paths.dirs.map(relative_dirs)
+    });
+
   })
 });
 
 var relative_dirs = function(curr) {
   return path.relative(conf.dir, curr);
-}
-
-var excluded_folders = function(val) {
-  return !val.match("bower_components");
 }
 
 app.get("/json", function(req, res, next) {

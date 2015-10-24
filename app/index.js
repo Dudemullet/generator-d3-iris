@@ -42,17 +42,11 @@ var D3BasicGenerator = yeoman.generators.Base.extend({
     this.mkdir('app');
     this.copy('index.jade', 'app/index.jade');
     this.copy('_package.json', 'package.json');
-    this.copy('_gulpfile.js', 'gulpfile.js');
     this.copy('iris.json', 'app/iris.json');
     this.copy('iris.csv', 'app/iris.csv');
     this.copy('server.js', 'server.js');
     this.copy('bundle.js', 'bundle.js');
   },
-
-  projectfiles: function () {
-    this.copy('editorconfig', '.editorconfig');
-    this.copy('jshintrc', '.jshintrc');
-  }
 });
 
 module.exports = D3BasicGenerator;

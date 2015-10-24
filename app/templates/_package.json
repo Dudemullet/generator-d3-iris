@@ -1,12 +1,12 @@
 {
   "name": "generator-d3-iris",
   "version": "0.0.1",
+  "description": "project created with generator d3-iris",
   "dependencies": {
     "gulp": "~3.6.2",
     "express": "~4.1.1",
     "express-livereload": "0.0.24",
     "connect-livereload": "~0.4.0",
-    "tiny-lr": "0.0.7",
     "lodash": "~2.4.1",
     "node-dir": "~0.1.5",
     "jade": "~1.3.1",
@@ -16,5 +16,5 @@
   "scripts": {
     "bundle": "browserify ./bundle.js -o ./app/d3.js"
   },
-  "author":"Luis gutierrez"
+  "author":"d3-iris"
 }
